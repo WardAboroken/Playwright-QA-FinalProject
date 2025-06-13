@@ -16,7 +16,7 @@ export class SwagLabsPage {
     await this.page.locator('[data-test="login-button"]').click();
     await expect(this.page).toHaveURL(url.inventoryPage);
   }
-  
+
   async selectCheckbox(checkbox) {
     await this.page.getByTestId(checkbox).check();
     await expect(this.page.getByTestId(checkbox)).toBeChecked();

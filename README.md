@@ -5,7 +5,8 @@ The tests simulate user flows and cover both **positive** and **negative** login
 
 ## 📁 Project Structure
 
-```FINALPROJECT/
+```
+FINALPROJECT/
 ├── data/ → Static test data (usernames, URLs)
 ├── helpers/ → Optional: selectors or utility functions
 ├── pages/ → Page Object Model (POM) classes
