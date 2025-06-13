@@ -4,30 +4,28 @@ This is my final automation project written with [Playwright](https://playwright
 The tests simulate user flows and cover both **positive** and **negative** login scenarios, **cart**, and **checkout**.
 
 ## 📁 Project Structure
+
 ```FINALPROJECT/
 ├── data/ → Static test data (usernames, URLs)
 ├── helpers/ → Optional: selectors or utility functions
 ├── pages/ → Page Object Model (POM) classes
 ├── tests/ → Test specs (login, cart, checkout, etc.)
 ├── playwright.config.js → Playwright configuration
-├── README.md → This file 😄```
-
+├── README.md → This file 😄
+```
 
 ---
 
 ## 🚀 How to Run the Tests
 
 1. Install dependencies:
-npm install
-
+   npm install
 
 2. Run all tests:
-npx playwright test
-
+   npx playwright test
 
 3. View HTML test report:
-npx playwright show-report
-
+   npx playwright show-report
 
 ---
 
@@ -51,4 +49,3 @@ npx playwright show-report
 ## 🌐 App Under Test
 
 [https://www.saucedemo.com/](https://www.saucedemo.com/)
-
