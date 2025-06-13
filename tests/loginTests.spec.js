@@ -37,8 +37,7 @@ test("Negative login with locked_out_user", async ({ page }) => {
   await loginPage.expectLoginFailure(lockedOutUser.expectedMessage);
 });
 
-test.describe
-  .only("Negative login tests with all possible negative users", () => {
+test.describe("Negative login tests with all possible negative users", () => {
   negativeUsersData.forEach((user, index) => {
     test(`Login Test [${index + 1}] - username: '${
       user.username || "[empty]"
