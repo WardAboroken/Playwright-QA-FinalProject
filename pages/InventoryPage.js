@@ -16,14 +16,22 @@ export class InventoryPage {
 
   // בדיקה שאכן הגענו לעמוד המוצרים
   async expectInventoryPage() {
+    await this.page.waitForLoadState("domcontentloaded");
     await expect(this.page).toHaveURL(url.inventoryPage);
     await expect(this.titleLocator).toHaveText("Products");
   }
 
   // הוספת מוצרים לעגלה לפי רשימת טסט-איידים
   async addProductsByTestIds(products = productsToAdd) {
+    // חכה שכל המוצרים ייטענו
+    await this.page.waitForSelector('[data-test^="add-to-cart"]', {
+      timeout: 10000,
+    });
+
     for (const product of products) {
-      await this.page.getByTestId(product.testId).click();
+      const button = this.page.locator(`[data-test="${product.testId}"]`);
+      await button.waitFor({ state: "visible", timeout: 5000 }); // המתן שהכפתור יהיה נראה
+      await button.click();
     }
   }
 
