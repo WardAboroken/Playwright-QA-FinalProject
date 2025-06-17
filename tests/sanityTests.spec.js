@@ -7,7 +7,7 @@ import { CheckoutPage } from "../pages/CheckoutPage";
 import { userData } from "../data/users";
 import { productsToAdd } from "../data/products"; // הקובץ עם המוצרים
 
-test.only("Full Sanity Test - Purchase Flow", async ({ page }) => {
+test("Full Sanity Test - Purchase Flow", async ({ page }) => {
   // שלב 1: התחברות
   const loginPage = new LoginPage(page);
   await loginPage.openLoginPage();
