@@ -6,3 +6,9 @@ export const userData = {
   error_user: "secret_sauce",
   visual_user: "secret_sauce",
 };
+
+export const userDataWithPasswordToCheckout = {
+  firstName: "Standard",
+  lastName: "User", // שם פרטי ושם משפחה לדוגמה
+  postalCode: "12345", // מיקוד לדוגמה
+};

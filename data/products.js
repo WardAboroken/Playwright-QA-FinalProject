@@ -1,4 +1,4 @@
-export const productsToAdd = [
+export const products = [
   {
     name: "Sauce Labs Backpack",
     testId: "add-to-cart-sauce-labs-backpack",

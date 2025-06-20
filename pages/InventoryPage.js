@@ -7,11 +7,18 @@ export class InventoryPage {
     this.page = page;
     this.titleLocator = page.locator(".title");
     this.cartBadge = page.locator(".shopping_cart_badge");
+    this.cartIcon = page.locator(".shopping_cart_link");
   }
 
   // ניווט לעמוד המוצרים
   async openInventoryPage() {
     await this.page.goto(url.inventoryPage);
+  }
+  // מעבר לעגלה
+  async goToCart() {
+    await this.cartIcon.click();
+    await expect(this.page).toHaveURL(url.cartPage);
+    await expect(this.titleLocator).toHaveText("Your Cart");
   }
 
   // בדיקה שאכן הגענו לעמוד המוצרים
